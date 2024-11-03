@@ -12,11 +12,11 @@ body{
 }
 .sub-header{
     display: grid;
-    grid-template-columns: 15% 15% 15% 15% 15% 15% 10%;
+    grid-template-columns: 13% 13% 13% 13% 13% 13% 13% 9%;
     background-color: rgb(208, 211, 208);
     border:solid black 2px;
     border-radius:10px;
-    font-size:25px;
+    font-size:20px;
     color:rgb(11, 147, 11);
     height: 100px;
     box-shadow:  0px 10px 10px rgb(56, 55, 55);;
@@ -54,7 +54,7 @@ body{
     grid-template-columns: 1fr;
     margin:0px;
     padding:0px;
-    width:15%;
+    width:13%;
     background-color:  rgb(208, 211, 208);
     text-align: center;
     color:rgb(11, 147, 11);
