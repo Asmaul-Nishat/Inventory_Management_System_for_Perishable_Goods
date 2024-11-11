@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="menubar2"><h4>PRODUCT</h4></div>
+            <div class="menubar2"><h4><a href="/product.html">PRODUCT</a></h4></div>
             <div class="menubar3"><h4>STORAGE</h4></div>
             <div class="menubar4"><h4>RECORDBOOK</h4></div>
             <div class="menubar5"><h4>DISTRIBUTOR</h4></div>
@@ -60,9 +60,25 @@
                        Lorem Ipsum.</h6>
             </div>
         </div>
-
+<!-- LOGIN PART START -->
         <div class="login">
             <h3>Login Here</h3>
+            
+            <form class="login_form">
+                <select id="Employee">
+                <option value="#">Agro Officer</option>
+                <option value="Neutrionist">Neutrionist</option>
+                <option value="WareHouse_Manager">WareHouse Manager</option>
+                <option value="Distributor">Distributor</option>
+                <option value="Farmer">Farmer</option>
+                <option value="Consumer">Consumer</option>
+                </select>
+
+                <input id="login_id" type="number" name="login" placeholder="Enter your ID here">
+                <input id="login_password" type="password" name="login" placeholder="Enter your password here">
+                
+                <button type="submit">Login</button>
+            </form>
         </div>
 
     </div>

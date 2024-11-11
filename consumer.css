@@ -5,7 +5,7 @@
 
 .consumer_choice{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     column-gap: 10px;
 }
 
@@ -19,7 +19,7 @@
 
 .product_details{
     display:grid;
-    grid-template-columns:  1fr 2fr;
+    grid-template-columns:  2fr 3fr;
     column-gap: 5px;
 
 }

@@ -192,6 +192,41 @@ body{
     color:rgb(11, 147, 11);
 }
 
+
+.login_form{
+    display:grid;
+    grid-template-columns: 1fr;
+    padding: 10%;
+}
+
+input, select{
+    margin: 5%;
+    height: 25px;
+    background-color:rgb(11, 147, 11);
+    color:white;
+    border:solid rgb(11, 147, 11) 5px;
+    border-radius: 6px;
+}
+
+input::placeholder{
+    color:white;
+
+}
+
+button{
+    margin: 20%;
+    height: 30px;
+}
+
+button:hover{
+    background-color:white;
+    border:solid rgb(11, 147, 11) 5px;
+    border-radius:10px;
+
+    
+}
+
+
 /* login part  end*/
 
 /* graph part start */
@@ -208,7 +243,7 @@ body{
     background-color: rgb(208, 211, 208);
     box-shadow: 0px 10px 10px rgb(35, 35, 35);
     border:solid rgb(11, 147, 11) 5px;
-    border-radius: 6px;;
+    border-radius: 6px;
     color:rgb(11, 147, 11);
     font-size:45px;
     text-align:center;
