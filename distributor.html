@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributor Dashboard</title>
+    <link rel="stylesheet" href="distributor.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <h1>Distributor Dashboard</h1>
+            <p>Welcome, Distributor! Update your delivery schedules and order status here.</p>
+        </div>
+
+        <!-- Order Status Update Section -->
+        <div class="section order-status">
+            <h2 class="section-title">Update Order Status</h2>
+            <form>
+                <label for="order-id">Order ID:</label>
+                <input type="text" id="order-id" name="order-id" placeholder="e.g., #D001" required>
+
+                <label for="location">Order ID:</label>
+                <input type="text" id="location" name="location" placeholder="Enter address" required>
+
+                <label for="product">Product:</label>
+                <input type="text" id="product" name="product" placeholder="Product name" readonly>
+
+                <label for="quantity">Quantity (kg):</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Quantity" readonly>
+
+                <label for="status">Order Status:</label>
+                <select id="status" name="status" required>
+                    <option value="pending">Pending</option>
+                    <option value="dispatched">Dispatched</option>
+                    <option value="delivered">Delivered</option>
+                </select>
+
+                <button type="submit" class="btn">Update Status</button>
+            </form>
+        </div>
+
+        <!-- Delivery Schedule Update Section -->
+        <div class="section delivery-schedule">
+            <h2 class="section-title">Update Delivery Schedule</h2>
+            <form>
+                <label for="delivery-date">Delivery Date:</label>
+                <input type="date" id="delivery-date" name="delivery-date" required>
+
+                <label for="delivery-time">Delivery Time:</label>
+                <input type="time" id="delivery-time" name="delivery-time" required>
+
+                <label for="vehicle-number">Vehicle Number:</label>
+                <input type="text" id="vehicle-number" name="vehicle-number" placeholder="Enter vehicle number" required>
+
+                <button type="submit" class="btn">Update Schedule</button>
+            </form>
+        </div>
+
+        <!-- Contact Information Update Section -->
+        <div class="section contact-info">
+            <h2 class="section-title">Update Contact Information</h2>
+            <form>
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" placeholder="Enter contact number" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address" required>
+
+                <button type="submit" class="btn">Update Contact</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

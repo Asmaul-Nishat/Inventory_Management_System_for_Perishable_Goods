@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Manager Dashboard</title>
+    <link rel="stylesheet" href="warehouse_manager.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <h1>Warehouse Manager Dashboard</h1>
+        </div>
+
+        <!-- Inventory Management Section -->
+        <div class="section inventory">
+            <h2 class="section-title">Inventory Management</h2>
+            <form>
+                <label for="item-name">Item:</label>
+                <input type="text" id="item-name" name="item-name" placeholder="e.g., Wheat">
+
+                <label for="quantity">Quantity (kg):</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter quantity">
+
+                <label for="last-updated">Last Updated:</label>
+                <input type="date" id="last-updated" name="last-updated">
+
+                <button type="submit" class="btn">Update Inventory</button>
+            </form>
+        </div>
+
+        <!-- Storage Conditions Section -->
+        <div class="section conditions">
+            <h2 class="section-title">Storage Conditions</h2>
+            <form>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="e.g., Warehouse 1">
+
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" id="temperature" name="temperature" placeholder="Enter temperature">
+
+                <label for="humidity">Humidity (%):</label>
+                <input type="number" id="humidity" name="humidity" placeholder="Enter humidity">
+
+                <button type="submit" class="btn">Update Conditions</button>
+            </form>
+        </div>
+
+        <!-- Order Tracking Section -->
+        <div class="section orders">
+            <h2 class="section-title">Order Tracking</h2>
+            <form>
+                <label for="order-id">Order ID:</label>
+                <input type="text" id="order-id" name="order-id" placeholder="e.g., #001">
+
+                <label for="product">Product:</label>
+                <input type="text" id="product" name="product" placeholder="e.g., Wheat">
+
+                <label for="quantity-ordered">Quantity (kg):</label>
+                <input type="number" id="quantity-ordered" name="quantity-ordered" placeholder="Enter quantity">
+
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="pending">Pending</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="delivered">Delivered</option>
+                </select>
+
+                <button type="submit" class="btn">Update Order</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
