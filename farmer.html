@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="/farmer.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Farmer Dashboard</h1>
+        <main class="main-content">
+            <section id="edit-data">
+                <h2>Edit Your Data</h2>
+                <form action="/farmer/update" method="POST" class="data-form">
+                    <label for="farmer-name">Name:</label>
+                    <input type="text" id="farmer-name" name="farmer_name" placeholder="Enter your name" required>
+    
+                    <label for="contact-info">Contact Info:</label>
+                    <input type="text" id="contact-info" name="contact_info" placeholder="Enter contact details" required>
+    
+                    <label for="farm-location">Farm Location:</label>
+                    <input type="text" id="farm-location" name="farm_location" placeholder="Enter location" required>
+    
+                    <label for="quantity">Product Quantity:</label>
+                    <input type="text" id="quantity" name="quantity" placeholder="Enter quantity" required>
+    
+
+                    <label for="crop-details">Crop Details:</label>
+                    <textarea id="crop-details" name="crop_details" rows="4" placeholder="Describe your crops" required></textarea>
+    
+                    <button type="submit" class="btn-submit">Update Data</button>
+                </form>
+            </section>
+            <br><br><br>
+    
+            <section id="view-info">
+                <h2>View Your Information</h2>
+                <p>Click below to see the details of your submitted data.</p>
+                <button onclick="location.href='/farmer/info'" class="btn-view">View Info</button>
+            </section>
+        </main>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#edit-data">Edit Data</a></li>
+            <li><a href="#view-info">View Information</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* General Reset */
+body, h1, h2, ul, li, p, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color:rgb(20, 141, 16);
+}
+
+body {
+    display: flex;
+    background-color: rgb(208, 211, 208);
+}
+
+/* Header */
+.dashboard-header {
+    width: 100%;
+    background-color: rgb(208, 211, 208);;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: #fcfcfc;
+    padding: 2rem 1rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 1rem 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(20, 141, 16);
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: rgb(255,0,0);
+}
+
+/* Main Content */
+.main-content {
+    width: 80%;
+    padding: 2rem;
+}
+
+.main-content h2 {
+    color: rgb(20, 141, 16);
+    margin-bottom: 1rem;
+}
+
+.data-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    text-align: left;
+    margin:auto;
+}
+
+.data-form label {
+    font-weight: bold;
+    color: rgb(20, 141, 16);
+}
+
+.data-form input, .data-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-submit, .btn-view {
+    background-color: rgb(208, 211, 208);;
+    color: rgb(20, 141, 16);
+    padding: 0.7rem;
+    background-color: rgb(11, 147, 11);
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-submit:hover, .btn-view:hover {
+    background-color: rgb(255, 0, 0);;
+}

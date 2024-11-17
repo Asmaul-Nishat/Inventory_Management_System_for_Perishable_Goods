@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Officer Dashboard</title>
+    <link rel="stylesheet" href="agro_officer.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Agro Officer Dashboard</h1>
+
+        <main class="main-content">
+            <section id="update-data">
+                <h2>Update Farm Data</h2>
+                <form action="/update" method="POST" class="data-form">
+                    <label for="crop-name">Crop Name:</label>
+                    <input type="text" id="crop-name" name="crop_name" placeholder="Enter crop name" required>
+    
+                    <label for="harvest-quantity">Harvest Quantity (kg):</label>
+                    <input type="number" id="harvest-quantity" name="harvest_quantity" placeholder="Enter quantity" required>
+    
+                    <label for="harvest-date">Harvest Date:</label>
+                    <input type="date" id="harvest-date" name="harvest_date" required>
+    
+                    <button type="submit" class="btn-submit">Update Data</button>
+                </form>
+            </section>
+            <br><br><br>
+    
+            <section id="view-records">
+                <h2>View Records</h2>
+                <p>Click below to view and manage farm records.</p>
+                <button onclick="location.href='/records'" class="btn-view">View Records</button>
+            </section>
+        </main>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#update-data">Update Data</a></li>
+            <li><a href="#view-records">View Records</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </nav>
+
+   
+</body>
+</html>

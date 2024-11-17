@@ -1,0 +1,99 @@
+/* General Reset */
+body, h1, h2, form, input, textarea, label, button, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: rgb(20, 141, 16);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #004643;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-form label {
+    font-weight: bold;
+    color: rgb(20, 141, 16);
+}
+
+.product-form input, .product-form textarea {
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.product-form textarea {
+    resize: none;
+}
+
+.product-form input[type="file"] {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.btn-submit {
+    background-color: rgb(20, 141, 16);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-submit:hover {
+    background-color: rgb(255,0,0);
+}
