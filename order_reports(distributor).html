@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributor Dashboard</title>
+    <link rel="stylesheet" href="order_reports(distributor).css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Menu -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="distributor_dashboard.html">Dashboard</a></li>
+                <!-- <li><a href="#order-status">Order Status</a></li>
+                <li><a href="#delivery-schedule">Delivery Schedule</a></li>
+                <li><a href="#contact-info">Contact Info</a></li>
+                <li><a href="#order-table">Order Table</a></li> -->
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>Order Information</h1>
+                <p>Welcome, Distributor! Manage your order reports here.</p>
+            </div>
+
+            <!-- Order Table Section -->
+            <div class="order-table-section" id="order-table">
+                <!-- <h2 class="section-title">Order Information</h2> -->
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Vehicle Number</th>
+                            <th>Contact Number</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sample Data -->
+                        <tr>
+                            <td>#D001</td>
+                            <td>Pending</td>
+                            <td>2024-11-17</td>
+                            <td>10:30 AM</td>
+                            <td>VN-1234</td>
+                            <td>+880123456789</td>
+                            <td>distributor@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>#D002</td>
+                            <td>Dispatched</td>
+                            <td>2024-11-16</td>
+                            <td>02:00 PM</td>
+                            <td>VN-5678</td>
+                            <td>+880987654321</td>
+                            <td>info@distributor.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

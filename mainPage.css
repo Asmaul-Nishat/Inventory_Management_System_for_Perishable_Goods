@@ -12,7 +12,7 @@ body{
 }
 .sub-header{
     display: grid;
-    grid-template-columns: 13% 13% 13% 13% 13% 13% 13% 9%;
+    grid-template-columns: 15% 15% 15% 15% 15% 15% 10%;
     background-color: rgb(208, 211, 208);
     border:solid black 2px;
     border-radius:10px;
@@ -124,14 +124,14 @@ body{
 
 .content-text{
     margin:0px 10px;
-    background-color:black;
+    /* background-color:black; */
     height:78.5%;
     width:71.28%;
     position:absolute;
     top:157px;
     opacity:0.65;
     border-radius:20px;
-    color:rgb(20, 141, 16);
+    color:white;
     text-align: center;
     
 }
@@ -139,15 +139,15 @@ body{
 
 .content-text:hover{
     margin:0px 10px;
-    background-color:black;
+    /* background-color:black; */
     height:77.6%;
     width:71.37%;
     position:absolute;
     top:157px;
     opacity:0.75;
-    border-radius:20px;
-    border:solid rgb(208, 211, 208) 4px;
-    color:rgb(208, 211, 208);
+    /* border-radius:20px;
+    border:solid rgb(208, 211, 208) 4px; */
+    color:rgb(165, 247, 101);
     text-align: center;}
 
 .content-text h6{

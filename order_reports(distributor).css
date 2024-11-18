@@ -1,0 +1,127 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f4f7;
+}
+
+/* Container for Sidebar and Main Content */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: rgb(11, 147, 11);
+    color: white;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+/* Header Styling */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    color: rgb(11, 147, 11);
+}
+
+.dashboard-header p {
+    color: rgb(11, 147, 11);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 1.5em;
+    color: rgb(11, 147, 11);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Order Table Styling */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #f7f9fb;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-table thead {
+    background-color: rgb(11, 147, 11);
+    color: #ffffff;
+}
+
+.order-table th {
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.order-table tbody tr {
+    border-bottom: 1px solid #d3e0ea;
+}
+
+.order-table tbody tr:nth-child(even) {
+    background-color: #f3f6f9;
+}
+
+.order-table td {
+    padding: 10px 15px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.order-table tbody tr:hover {
+    background-color: rgba(11, 147, 11, 0.1);
+}
