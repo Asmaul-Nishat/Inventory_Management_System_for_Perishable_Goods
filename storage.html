@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Storage</title>
+    <link rel="stylesheet" href="storage.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Farm Storage Management</h1>
+        <nav class="navigation">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="product_upload.html">Add Product</a></li>
+                <li><a href="storage_page.html">Storage</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h2>Storage Overview</h2>
+        
+        <!-- Add New Storage Item -->
+        <section class="add-storage">
+            <h3>Add to Storage</h3>
+            <form action="/add_to_storage" method="POST">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product_name" placeholder="Enter product name" required>
+
+                <label for="product-quantity">Quantity (kg):</label>
+                <input type="number" id="product-quantity" name="product_quantity" placeholder="Enter quantity" required>
+
+                <label for="storage-location">Storage Location:</label>
+                <input type="text" id="storage-location" name="storage_location" placeholder="Enter location" required>
+
+                <label for="product-status">Status:</label>
+                <select id="product-status" name="product_status" required>
+                    <option value="Fresh">Fresh</option>
+                    <option value="Stored">Stored</option>
+                    <option value="Expired">Expired</option>
+                </select>
+
+                <button type="submit" class="btn-submit">Add to Storage</button>
+            </form>
+        </section>
+
+        <!-- Current Storage Inventory -->
+        <section class="current-storage">
+            <h3>Current Storage Inventory</h3>
+            <table class="storage-table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Quantity (kg)</th>
+                        <th>Location</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tomatoes</td>
+                        <td>200</td>
+                        <td>Cold Storage 1</td>
+                        <td>Fresh</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Apples</td>
+                        <td>150</td>
+                        <td>Storage Room 2</td>
+                        <td>Stored</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>500</td>
+                        <td>Warehouse A</td>
+                        <td>Stored</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

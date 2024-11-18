@@ -32,17 +32,17 @@ body {
 }
 
 .dashboard-header h1 {
-    color: #333;
+    color: rgb(11, 147, 11);
 }
 
 .dashboard-header p {
-    color: #666;
+    color: rgb(11, 147, 11);
 }
 
 /* Section Titles */
 .section-title {
     font-size: 1.2em;
-    color: #333;
+    color: rgb(11, 147, 11);
     margin-bottom: 10px;
 }
 
@@ -69,7 +69,7 @@ form {
 label {
     margin-top: 10px;
     font-weight: bold;
-    color: #333;
+    color: rgb(11, 147, 11);
 }
 
 input[type="text"], input[type="tel"], input[type="email"], input[type="number"], input[type="date"], input[type="time"], select {

@@ -1,0 +1,139 @@
+/* General Reset */
+body, h1, h2, h3, form, input, select, label, button, ul, li, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: rgb(20, 141, 16);
+}
+
+/* Header */
+.header {
+    background-color: rgb(20, 141, 16);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navigation ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgb(208, 211, 208);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    text-align: center;
+    color: rgb(20, 141, 16);
+    margin-bottom: 1.5rem;
+}
+
+/* Add Storage Section */
+.add-storage {
+    margin-bottom: 2rem;
+}
+
+.add-storage form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.add-storage label {
+    font-weight: bold;
+    color: rgb(20, 141, 16);
+}
+
+.add-storage input, .add-storage select {
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-storage .btn-submit {
+    background-color: rgb(20, 141, 16);
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.add-storage .btn-submit:hover {
+    background-color: rgb(255,0,0);
+}
+
+/* Current Storage Table */
+.current-storage table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.current-storage th, .current-storage td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.current-storage th {
+    background-color: rgb(20, 141, 16);
+    color: white;
+    text-transform: uppercase;
+}
+
+.current-storage tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.current-storage .btn-edit {
+    background-color: #f9bc60;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.current-storage .btn-delete {
+    background-color: #ff4d4d;
+    color: rgb(20, 141, 16);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.current-storage .btn-edit:hover, .current-storage .btn-delete:hover {
+    opacity: 0.8;
+}
