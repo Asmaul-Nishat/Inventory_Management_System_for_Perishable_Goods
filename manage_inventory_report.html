@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Inventory Reports</title>
+    <link rel="stylesheet" href="manage_inventory_reports.css"> <!-- Link your CSS file -->
+</head>
+<body>
+    <!-- Sidebar Menu (can be included from another part of your page) -->
+    <div class="sidebar">
+        <h2>Inventory Management</h2>
+        <ul>
+            <li><a href="warehouse_manager_Dashboard.html">Dashboard</a></li>
+            <!-- <li><a href="inventory-reports.html">Inventory Reports</a></li> -->
+            <li><a href="#add-btn">Add New Item</a></li>
+            <li><a href="mainPage.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h1>Manage Inventory Reports</h1>
+
+        <!-- Table for Inventory Reports -->
+        <table class="inventory-table">
+            <thead>
+                <tr>
+                   <th>Product Name</th>
+                    <th>Product ID</th>
+                    <th>Quantity (kg)</th>
+                    <th>Temp Range(°C)</th>
+                    <th>Humidity Range(%)</th>
+                    <th>Location</th>
+                    <th>Last Updated</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="inventory-table-body">
+                <!-- Existing Inventory Rows will be inserted here -->
+            </tbody>
+        </table>
+
+        <!-- Button to Add New Row -->
+        <button class="btn" onclick="addNewRow()">Add New Report</button>
+    </div>
+
+    <!-- Modal for Adding a New Report (this will be displayed when "Add New Report" is clicked) -->
+    <div id="add-report-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add New Inventory Report</h2>
+            <form id="add-report-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" required>
+
+                <label for="product-id">Product Id:</label>
+                <input type="text" id="product-id" name="product-id" required>
+
+                <label for="quantity">Quantity (kg):</label>
+                <input type="number" id="quantity" name="quantity" required>
+
+                <label for="hum-range">Humidity Range(%):</label>
+                <input type="text" id="hum-range" name="hum-range" required>
+
+                <label for="temp-range">Temparature Range(°C):</label>
+                <input type="text" id="temp-range" name="temp-range" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="last-update">Last Update:</label>
+                <input type="datetime-local" id="last-update" name="last-update" required>
+                
+                <button type="submit" class="btn" id="add-btn">Add Report</button>
+                <button type="close" class="btn">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="manage_inventory_reports.js"></script> <!-- Link to JS for functionality -->
+</body>
+</html>

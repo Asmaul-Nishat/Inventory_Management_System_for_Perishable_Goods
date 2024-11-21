@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Officer Dashboard</title>
+    <link rel="stylesheet" href="agroOfficer_dashboard.css">
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <h2>Agro Officer</h2>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#crop-details">Add Crop</a></li>
+            <!-- <li><a href="#update-crop-details">Update Crop</a></li> -->
+            <li><a href="crop_reports.html">Crop Reports</a></li>
+            <!-- <li><a href="#farmer-info">Farmer Info</a></li> -->
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="mainPage.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <h1>Overview</h1>
+            <div class="cards">
+                <div class="card">
+                    <h2>Total Farmers</h2>
+                    <p>350</p>
+                </div>
+                <div class="card">
+                    <h2>Active Crops</h2>
+                    <p>120</p>
+                </div>
+                <div class="card">
+                    <h2>Reports Sent</h2>
+                    <p>85</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Crop Details Section -->
+        <section id="crop-details" class="section">
+            <h1>Add Crop Details</h1>
+            <form>
+                <label for="crop-name">Crop Name:</label>
+                <input type="text" id="crop-name" name="crop-name" placeholder="Enter Crop Name" required>
+
+                <label for="crop-id">Crop ID:</label>
+                <input type="text" id="crop-id" name="crop-id" placeholder="Enter Crop Id" required>
+
+                <label for="quantity">Quantity (kg):</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter Quantity" required>
+
+                <label for="crop-location">Crop Location:</label>
+                <input type="text" id="crop-location" name="crop-location" placeholder="Enter Crop Location" required>
+
+                <label for="harvest-date">Harvest Date:</label>
+                <input type="date" id="harvest-date" name="harvest-date" required>
+
+                <label for="farmer-name">Farmer Name:</label>
+                <input type="text" id="farmer-name" name="farmer-name" placeholder="Enter Farmer Name" required>
+
+                <label for="farmer-id">Farmer Id:</label>
+                <input type="number" id="farmer-id" name="farmer-id" placeholder="Enter Farmer Id" required>
+
+
+                <label for="farmer-contact">Contact Number:</label>
+                <input type="tel" id="farmer-contact" name="farmer-contact" placeholder="Enter Contact Number" required>
+
+                <button type="submit" class="btn">Add Crop</button>
+            </form>
+        </section>
+
+      
+
+        <!-- Analytics Section -->
+        <section id="analytics" class="section">
+            <h1>Analytics</h1>
+            <p>Analytics charts and data will be displayed here.</p>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <h1>Profile</h1>
+            <p>Update your profile information here.</p>
+        </section>
+    </div>
+</body>
+</html>

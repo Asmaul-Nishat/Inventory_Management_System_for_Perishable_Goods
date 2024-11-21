@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Reports</title>
+    <link rel="stylesheet" href="crop_reports.css">
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <h2>Agro Officer</h2>
+        <ul>
+            <li><a href="agroOfficer_dashboard.html">Dashboard</a></li>
+            <li><a href="crop_reports.html">Crop Reports</a></li>
+            <!-- <li><a href="farmer_reports.html">Farmer Reports</a></li> -->
+            <li><a href="mainPage.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <section class="section">
+            <h1>Crop Reports</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Crop Name</th>
+                        <th>Crop ID</th>
+                        <th>Location</th>
+                        <th>Quantity (kg)</th>
+                        <th>Harvest Date</th>
+                        <th>Farmer Name</th>
+                        <th>Farmer ID</th>
+                        <th>Contact Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Row -->
+                    <tr>
+                        <td>Wheat</td>
+                        <td>#C001</td>
+                        <td>Green Valley</td>
+                        <td>1500</td>
+                        <td>2024-11-25</td>
+                        <td>John Doe</td>
+                        <td>#F101</td>
+                        <td>+1 234 567 890</td>
+                        <td>
+                            <button class="btn edit-btn">Edit</button>
+                            <button class="btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Additional rows can be dynamically added -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>

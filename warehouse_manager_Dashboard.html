@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Manager Dashboard</title>
+    <link rel="stylesheet" href="warehouse_manager_dashboard.css">
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <h2>Warehouse Manager</h2>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#inventory">Manage Inventory</a></li>
+            <li><a href="#incoming-shipments">Incoming Shipments</a></li>
+            <li><a href="#outgoing-shipments">Outgoing Shipments</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="mainPage.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <h1>Overview</h1>
+            <div class="cards">
+                <div class="card">
+                    <h2>Total Stock</h2>
+                    <p>25,000 kg</p>
+                </div>
+                <div class="card">
+                    <h2>Total Items</h2>
+                    <p>350</p>
+                </div>
+
+                <div class="cards">
+                    
+                <div class="card">
+                    <h2>Incoming Shipments</h2>
+                    <p>5</p>
+                </div>
+                <div class="card">
+                    <h2>Outgoing Shipments</h2>
+                    <p>8</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manage Inventory Section -->
+        <section id="inventory" class="section">
+            <h1>Manage Inventory</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Product ID</th>
+                        <th>Quantity (kg)</th>
+                        <th>Temp Range(°C)</th>
+                        <th>Humidity Range(%)</th>
+                        <th>Location</th>
+                        <th>Last Updated</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rice</td>
+                        <td>#P101</td>
+                        <td>10,000</td>
+                        <td>10-30</td>
+                        <td>30-50</td>
+                        <td>Warehouse A</td>
+                        <td>2024-11-15</td>
+                        <td>
+                            <button class="btn edit-btn">Edit</button>
+                            <button class="btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Wheat</td>
+                        <td>#P102</td>
+                        <td>15,000</td>
+                        <td>10-30</td>
+                        <td>30-50</td>
+                        <td>Warehouse B</td>
+                        <td>2024-11-14</td>
+                        <td>
+                            <button class="btn edit-btn">Edit</button>
+                            <button class="btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="view-all-reports">
+                <a href="manage_inventory_report.html" class="btn view-btn">View All Reports</a>
+            </div>
+        </section>
+
+        <!-- Incoming Shipments Section -->
+        <section id="incoming-shipments" class="section">
+            <h1>Incoming Shipments</h1>
+            <div class="main-content">
+            
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Shipment ID</th>
+                                <th>Crop Name</th>
+                                <th>Crop ID</th>
+                                <th>Quantity (kg)</th>
+                                <th>Farm ID</th>
+                                <th>Source Location</th>
+                                <th>Arrival Date</th>
+                                <th>Contact Number</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#S1001</td>
+                                <td>Rice</td>
+                                <td>#C101</td>
+                                <td>10,000</td>
+                                <td>1A</td>
+                                <td>Farm A</td>
+                                <td>2024-11-20</td>
+                                <td>+123456789</td>
+                                <td>
+                                    <button class="btn edit-btn">Edit</button>
+                                    <button class="btn delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#S1002</td>
+                                <td>Wheat</td>
+                                <td>#C102</td>
+                                <td>8,000</td>
+                                <td>1B</td>
+                                <td>Farm B</td>
+                                <td>2024-11-22</td>
+                                <td>+987654321</td>
+                                <td>
+                                    <button class="btn edit-btn">Edit</button>
+                                    <button class="btn delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="view-all-reports">
+                        <a href="all_incoming_shipments_reports.html" class="btn view-btn">View All Reports</a>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Outgoing Shipments Section -->
+        <section id="outgoing-shipments" class="section">
+            <h1>Outgoing Shipment Reports</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Shipment ID</th>
+                        <th>Crop Name</th>
+                        <th>Crop ID</th>
+                        <th>Quantity (kg)</th>
+                        <th>Destination</th>
+                        <th>Dispatch Date</th>
+                        <th>Contact Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#O2001</td>
+                        <td>Maize</td>
+                        <td>#C201</td>
+                        <td>5,000</td>
+                        <td>Warehouse A</td>
+                        <td>2024-11-15</td>
+                        <td>+123456789</td>
+                        <td>
+                            <button class="btn edit-btn">Edit</button>
+                            <button class="btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#O2002</td>
+                        <td>Barley</td>
+                        <td>#C202</td>
+                        <td>7,500</td>
+                        <td>Warehouse B</td>
+                        <td>2024-11-17</td>
+                        <td>+987654321</td>
+                        <td>
+                            <button class="btn edit-btn">Edit</button>
+                            <button class="btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- View All Reports Button -->
+            <div class="view-all-reports">
+                <a href="all_outgoing_reports.html" class="btn view-btn">View All Reports</a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <h1>Profile</h1>
+            <div class="profile-card">
+                <!-- Profile Photo -->
+                <div class="profile-photo">
+                    <img src="profilePic.jpg" alt="Profile Photo">
+                </div>
+
+                <!-- Profile Information -->
+                <div class="profile-info">
+                    <h2>John Doe</h2>
+                    <p><strong>ID:</strong> #WM001</p>
+                    <p><strong>Email:</strong> john.doe@example.com</p>
+                    <p><strong>Contact:</strong> +123456789</p>
+                    <p><strong>Position:</strong> Warehouse Manager</p>
+                    <p><strong>Address:</strong> 123 Warehouse Street, Cityname</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
