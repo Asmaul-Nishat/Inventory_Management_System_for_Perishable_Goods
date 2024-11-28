@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Storage Dashboard</title>
+    <link rel="stylesheet" href="storage_dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Farm Storage Dashboard</h2>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="storage_reports.html">View Reports</a></li>
+                <li><a href="storage.html">Add Storage Data</a></li>
+                <li><a href="mainPage.html">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>Farm Storage Overview</h1>
+
+            <!-- Chart Section -->
+            <div class="chart-container">
+                <h2>Storage Utilization</h2>
+                <canvas id="storageChart"></canvas>
+            </div>
+
+            <!-- Storage Table -->
+            <div class="storage-table">
+                <h2>Storage Details</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Storage ID</th>
+                            <th>Crop Name</th>
+                            <th>Stored Quantity (kg)</th>
+                            <th>Max Capacity (kg)</th>
+                            <th>Last Updated</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="storage-table-body">
+                        <!-- Dynamic rows will be inserted here -->
+                    </tbody>
+                </table>
+                <button class="btn" onclick="openAddModal()">Add New Storage</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div id="storage-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Add Storage Data</h2>
+            <form id="storage-form">
+                <label for="crop-name">Crop Name:</label>
+                <input type="text" id="crop-name" required>
+
+                <label for="stored-quantity">Stored Quantity (kg):</label>
+                <input type="number" id="stored-quantity" required>
+
+                <label for="max-capacity">Max Capacity (kg):</label>
+                <input type="number" id="max-capacity" required>
+
+                <button type="submit" class="btn">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="storage_dashboard.js"></script>
+</body>
+</html>

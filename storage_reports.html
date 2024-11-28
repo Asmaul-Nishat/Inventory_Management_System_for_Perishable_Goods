@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Storage Reports</title>
+    <link rel="stylesheet" href="storage_reports.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Farm Storage Dashboard</h2>
+            <ul>
+                <li><a href="storage_dashboard.html">Dashboard</a></li>
+                <li><a href="#" class="active">View Reports</a></li>
+                <li><a href="add-storage.html">Add Storage Data</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>Storage Reports</h1>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <h2>Filter Reports</h2>
+                <form id="filter-form">
+                    <label for="crop-filter">Crop:</label>
+                    <select id="crop-filter">
+                        <option value="all">All</option>
+                        <option value="Wheat">Wheat</option>
+                        <option value="Rice">Rice</option>
+                        <option value="Corn">Corn</option>
+                    </select>
+
+                    <label for="date-filter">Date:</label>
+                    <input type="date" id="date-filter">
+
+                    <button type="submit" class="btn">Apply Filters</button>
+                </form>
+            </div>
+
+            <!-- Reports Table -->
+            <div class="reports-table">
+                <h2>Detailed Storage Report</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Storage ID</th>
+                            <th>Crop Name</th>
+                            <th>Stored Quantity (kg)</th>
+                            <th>Max Capacity (kg)</th>
+                            <th>Last Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reports-table-body">
+                        <!-- Dynamic rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Chart Section -->
+            <div class="chart-container">
+                <h2>Crop Distribution</h2>
+                <canvas id="reportsChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="view-reports.js"></script>
+</body>
+</html>
