@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="admin_settings.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Farm Logo">
+            <h1>Settings</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="admin_dashboard.html">Dashboard</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#preferences">Preferences</a></li>
+                <li><a href="#password">Password</a></li>
+                <li><a href="mainPage.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Profile Settings -->
+        <section id="profile">
+            <h2>Profile Settings</h2>
+            <form>
+                <label for="employee">Employee As:</label>
+                <select id="employee">
+                    <option id="employee">A1</option>
+                    <option id="employee">A2</option>
+                    <option id="employee">A3</option>
+                    <option id="employee">A4</option>
+                </select>
+
+                <label for="employee_id">Employee ID:</label>
+                <select id="employee_id">
+                    <option id="employee_id">A1001</option>
+                    <option id="employee_id">A2001</option>
+                    <option id="employee_id">A3001</option>
+                    <option id="employee_id">A4001</option>
+                </select>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" placeholder="Enter your phone number">
+                
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+
+        <!-- System Preferences -->
+        <section id="preferences">
+            <h2>System Preferences</h2>
+            <form>
+                <label for="theme">Theme:</label>
+                <select id="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+                
+                <label for="notifications">Notifications:</label>
+                <select id="notifications">
+                    <option value="enabled">Enabled</option>
+                    <option value="disabled">Disabled</option>
+                </select>
+                
+                <button type="submit">Update Preferences</button>
+            </form>
+        </section>
+
+        <!-- Password Management -->
+        <section id="password">
+            <h2>Password Management</h2>
+            <form>
+                <label for="current-password">Current Password:</label>
+                <input type="password" id="current-password" placeholder="Enter current password">
+                
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" placeholder="Enter new password">
+                
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" placeholder="Re-enter new password">
+                
+                <button type="submit">Update Password</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Farm Inventory Management. All rights reserved.</p>
+    </footer>
+</body>
+</html>
