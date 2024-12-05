@@ -109,6 +109,7 @@ body{
     display:grid;
     grid-template-columns: 70% 26%;
     column-gap: 4%;
+    height:550px;
     z-index:1;
 }
 
@@ -128,7 +129,7 @@ body{
     height:78.5%;
     width:71.28%;
     position:absolute;
-    top:400px;
+    top:900px;
     opacity:0.65;
     border-radius:20px;
     color:white;
@@ -138,17 +139,8 @@ body{
 
 
 .content-text:hover{
-    margin:0px 10px;
-    /* background-color:black; */
-    height:77.6%;
-    width:71.37%;
-    position:absolute;
-    top:400px;
-    opacity:0.75;
-    /* border-radius:20px;
-    border:solid rgb(208, 211, 208) 4px; */
     color:rgb(165, 247, 101);
-    text-align: center;}
+   }
 
 .content-text h6{
     padding:0px 20px;
@@ -168,7 +160,7 @@ body{
 /* login part  start*/
 
 .login{
-    height:76%;
+    height:75%;
     width:90%;
     background-color: rgb(208, 211, 208);
     box-shadow:  -5px 10px 10px rgb(35, 35, 35);
@@ -233,18 +225,18 @@ button:hover{
 .graph{
     margin:20px 10px;
     display:grid;
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: 15% 15% 15% 15% 15%;
     column-gap: 5.2%;
 }
 
 .graph-1{
     height:100px;
     width:86%;
-    background-color: rgba(221, 255, 0, 0.798);
+    background-color: rgba(106, 194, 245, 0.798);
     box-shadow: 0px 10px 10px rgb(35, 35, 35);
-    border:solid rgb(11, 147, 11) 5px;
+    /* border:solid rgb(11, 147, 11) 5px; */
     border-radius: 6px;
-    color:rgb(11, 147, 11);
+    color:rgb(255, 255, 255);
     font-size:45px;
     text-align:center;
     padding:40px;
@@ -254,11 +246,11 @@ button:hover{
 .graph-2{
     height:100px;
     width:86%;
-    background-color: rgba(253, 170, 4, 0.766);
+    background-color: rgba(243, 176, 41, 0.766);
     box-shadow: 0px 10px 10px rgb(35, 35, 35);
-    border:solid rgb(11, 147, 11) 5px;
+    /* border:solid rgb(11, 147, 11) 5px; */
     border-radius: 6px;
-    color:rgb(11, 147, 11);
+    color:rgb(255, 255, 255);
     font-size:45px;
     text-align:center;
     padding:40px;
@@ -267,11 +259,11 @@ button:hover{
 .graph-3{
     height:100px;
     width:86%;
-    background-color: rgba(221, 255, 0, 0.798);
+    background-color: rgba(223, 248, 64, 0.798);
     box-shadow: 0px 10px 10px rgb(35, 35, 35);
-    border:solid rgb(11, 147, 11) 5px;
+    /* border:solid rgb(11, 147, 11) 5px; */
     border-radius: 6px;
-    color:rgb(11, 147, 11);
+    color:rgb(255, 255, 255);
     font-size:45px;
     text-align:center;
     padding:40px;
@@ -281,23 +273,61 @@ button:hover{
 .graph-4{
     height:100px;
     width:86%;
-    background-color: rgba(253, 170, 4, 0.766);
+    background-color: rgba(85, 245, 165, 0.766);
     box-shadow: 0px 10px 10px rgb(35, 35, 35);
-    border:solid rgb(11, 147, 11) 5px;
+    /* border:solid rgb(11, 147, 11) 5px; */
     border-radius: 6px;
-    color:rgb(11, 147, 11);
+    color:rgb(255, 255, 255);
     font-size:45px;
     text-align:center;
     padding:40px;
 
 }
 
+.graph-5{
+    height:100px;
+    width:86%;
+    background-color: rgba(216, 107, 247, 0.766);
+    box-shadow: 0px 10px 10px rgb(35, 35, 35);
+    /* border:solid rgb(11, 147, 11) 5px; */
+    border-radius: 6px;
+    color:rgb(255, 255, 255);
+    font-size:45px;
+    text-align:center;
+    padding:40px;
+
+}
+
+
+.graph-container {
+    width:98%;
+    margin:1%;
+    height:500px;
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.graph-line{
+    width:98% !important;
+}
+
+
+/* Image animation */
+
+
 .footer{
     margin:20px 20px 10px 10px;
-    background-color:rgb(208, 211, 208);
+    background-color:rgb(190, 223, 190);
     height:100px;
     width:100%;
     color:rgb(20, 141, 16);
     font-size: 40px;
     text-align:center;
 }
+
+
+/* Photo scroller */
+

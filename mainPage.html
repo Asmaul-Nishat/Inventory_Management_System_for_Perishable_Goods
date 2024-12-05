@@ -43,17 +43,27 @@
 
 
     <div class="graph">
-        <div class="graph-1">info 1</div>
-        <div class="graph-2">info 2</div>
-        <div class="graph-3">info 3</div>
-        <div class="graph-4">info 4</div>
+        <div class="graph-1">Available Stock</div>
+        <div class="graph-2">Sold Crops</div>
+        <div class="graph-3">Total Order</div>
+        <div class="graph-4">Order Completed</div>
+        <div class="graph-5">Order Processing</div>
     </div>
+
+    <!-- Graph -->
+
+    <div class="graph-container">
+        <canvas id="yearlyDataGraph" class="graph-line"></canvas>
+    </div>
+    
 
     <!-- main content part start -->
     <div class="mainContent">
 
         <div class="content">
+            
             <img class="photo1" src="front-pic.jpg" alt="pic1">
+            
 
             <div class="content-text">
                 <h1>Inventory Management System</h1>
@@ -76,6 +86,7 @@
             
             <form class="login_form">
                 <select id="Employee">
+                <option value="Consumer">Admin</option>
                 <option value="#">Agro Officer</option>
                 <option value="Neutrionist">Neutrionist</option>
                 <option value="WareHouse_Manager">WareHouse Manager</option>
@@ -98,5 +109,8 @@
    
 
     <div class="footer"><h1>FOOTER</h1></div>
+
+    <script src="mainPage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

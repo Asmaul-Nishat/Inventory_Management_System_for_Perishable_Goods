@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="transportation.css">
+    <title>Farm Transportation Management</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo-div">
+            <img class="logo" src="logo.png" alt="logo">
+        </div>
+        <div class="title">
+            <h1>Farm Transportation Management</h1>
+        </div>
+        <div class="logout">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Add Vehicle Section -->
+        <div class="add-vehicle-section">
+            <h2>Add New Vehicle</h2>
+            <form id="addVehicleForm" onsubmit="addVehicle(event)">
+                <input type="text" id="vehicleId" placeholder="Vehicle ID" required>
+                <input type="text" id="vehicleType" placeholder="Vehicle Type" required>
+                <input type="text" id="driverName" placeholder="Driver Name" required>
+                <button type="submit">Add Vehicle</button>
+            </form>
+        </div>
+
+        <!-- Active Transportation List -->
+        <div class="active-transport-section">
+            <h2>Active Transportations</h2>
+            <table id="transportationTable">
+                <thead>
+                    <tr>
+                        <th>Vehicle ID</th>
+                        <th>Type</th>
+                        <th>Driver</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic rows go here -->
+                    <tr>
+                        <td>1234</td>
+                        <td>Truck</td>
+                        <td>John Doe</td>
+                        <td>In Transit</td>
+                        <td>
+                            <button onclick="updateStatus('1234')">Update Status</button>
+                            <button onclick="removeVehicle('1234')">Remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 COMPANY NAME. All Rights Reserved.</p>
+    </div>
+
+    <script src="transportation.js"></script>
+</body>
+</html>

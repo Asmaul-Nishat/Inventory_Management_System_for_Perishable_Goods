@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ccc;
+}
+
+.logo {
+    height: 50px;
+}
+
+.title h1 {
+    margin: 0;
+    color: #333;
+}
+
+.logout button {
+    padding: 5px 10px;
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.add-vehicle-section, .active-transport-section {
+    margin-bottom: 30px;
+}
+
+.add-vehicle-section h2, .active-transport-section h2 {
+    color: #333;
+}
+
+.add-vehicle-section form input {
+    padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-vehicle-section form button {
+    padding: 10px 20px;
+    background-color: rgb(11, 147, 11);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active-transport-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.active-transport-section th, .active-transport-section td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.active-transport-section th {
+    background-color: #f4f4f4;
+}
+
+.active-transport-section tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.active-transport-section tr:hover {
+    background-color: #f1f1f1;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(11, 147, 11);
+    color: white;
+}
