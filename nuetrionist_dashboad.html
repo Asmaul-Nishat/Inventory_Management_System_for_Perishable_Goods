@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nuetrionist_dashboad.css">
+    <title>Nutritionist Dashboard</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo-div">
+            <img class="logo" src="logo.png" alt="Company Logo">
+        </div>
+        <div class="sub-header">
+            <h1>Nutritionist Dashboard</h1>
+            <nav>
+                <a href="#add-analysis">Add Analysis</a>
+                <a href="nuetrionist_reports.html">Full Reports</a>
+                <a href="mainPage.html" class="logout-btn">Logout</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Analysis Form Section -->
+    <div class="form-section">
+        <h2>Add New Product Analysis</h2>
+        <form id="product-analysis-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+
+            <label for="product-code">Product Code:</label>
+            <input type="text" id="product-code" name="product-code" placeholder="Enter product code" required>
+
+            <label for="temp-low">Temperature Value (Low):</label>
+            <input type="number" id="temp-low" name="temp-low" placeholder="Enter low temperature" required>
+
+            <label for="temp-high">Temperature Value (High):</label>
+            <input type="number" id="temp-high" name="temp-high" placeholder="Enter high temperature" required>
+
+            <label for="humidity-low">Humidity Value (Low):</label>
+            <input type="number" id="humidity-low" name="humidity-low" placeholder="Enter low humidity" required>
+
+            <label for="humidity-high">Humidity Value (High):</label>
+            <input type="number" id="humidity-high" name="humidity-high" placeholder="Enter high humidity" required>
+
+            <label for="quality">Select Product Quality:</label>
+            <select id="quality" name="quality" required>
+                <option value="" disabled selected>Select quality</option>
+                <option value="High Quality">High Quality</option>
+                <option value="Medium Quality">Medium Quality</option>
+                <option value="Low Quality">Low Quality</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+    </div>
+
+    <script src="nuetrionist_dashboard.js"></script>
+</body>
+</html>

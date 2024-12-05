@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nuetrionist_reports.css">
+    <title>Nutritionist Full Reports</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="logo-div">
+            <img class="logo" src="logo.png" alt="Company Logo">
+        </div>
+        <div class="sub-header">
+            <h1>Full Reports</h1>
+            <nav>
+                <a href="nuetrionist_dashboad.html">Dashboard</a>
+                <a href="mainPage.html" class="logout-btn">Logout</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Reports Section -->
+    <div class="reports-section">
+        <h2>Product Analysis Reports</h2>
+        <table id="reports-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Code</th>
+                    <th>Temperature (Low - High)</th>
+                    <th>Humidity (Low - High)</th>
+                    <th>Quality</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be dynamically populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+    </div>
+
+    <script src="fullReports.js"></script>
+</body>
+</html>

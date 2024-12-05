@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.location.href = "/agroOfficer_dashboard.html"; // Redirect to Agro Officer page
                 break;
             case "Neutrionist":
-                window.location.href = "/Neutrionist.html"; // Redirect to Nutritionist page
+                window.location.href = "/nuetrionist_dashboad.html"; // Redirect to Nutritionist page
                 break;
             case "WareHouse_Manager":
                 window.location.href = "/warehouse_manager_Dashboard.html"; // Redirect to Warehouse Manager page
