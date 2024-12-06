@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Reports</title>
+    <link rel="stylesheet" href="consumer_dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Order Reports</h1>
+        <nav>
+            <a href="consumer_dashboard.html" class="nav-link">Back to Dashboard</a>
+        </nav>
+    </div>
+
+    <div class="reports-section">
+        <h2>Order History</h2>
+        <table id="reports-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Product Name</th>
+                    <th>Type</th>
+                    <th>Unit Price ($)</th>
+                    <th>Quantity</th>
+                    <th>Total Price ($)</th>
+                    <th>Location</th>
+                    <th>Phone</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="reports-body">
+                <!-- Order rows will be dynamically populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="order_history.js"></script>
+</body>
+</html>

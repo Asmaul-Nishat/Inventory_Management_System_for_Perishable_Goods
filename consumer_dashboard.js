@@ -176,3 +176,151 @@ function showOrderHistory() {
 // Call this function when the "View Order History" button is clicked
 document.querySelector('button').addEventListener('click', showOrderHistory);
 
+
+
+// Track the orders to display in the small popup
+const orderSummary = [];
+
+// Function to create a unique Order ID
+function generateOrderID() {
+    return `ORD-${Math.floor(100000 + Math.random() * 900000)}`;
+}
+
+// Handle Order Form Submission
+document.getElementById('order-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent page reload
+
+    const productCode = event.target.dataset.productCode;
+    const product = productsData.find(p => p.productCode === productCode);
+
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const location = document.getElementById('location').value;
+    const phone = document.getElementById('phone').value;
+    const name = document.getElementById('name').value;
+
+    const orderID = generateOrderID();
+    const unitPrice = product.price;
+    const totalPrice = (unitPrice * quantity).toFixed(2);
+
+    // Add order details to the orderSummary array
+    orderSummary.push({
+        orderID: orderID,
+        productName: product.productName,
+        productType: product.quality,
+        unitPrice: unitPrice,
+        quantity: quantity,
+        totalPrice: totalPrice
+    });
+
+    // Update the order summary popup
+    updateOrderSummaryPopup();
+
+    // Hide the order popup after submission
+    closePopup();
+
+    // Confirm order submission (Optional)
+    alert(`Order Submitted Successfully!\nOrder ID: ${orderID}`);
+});
+
+// Function to update the order summary popup
+function updateOrderSummaryPopup() {
+    const orderPopupContainer = document.getElementById('order-summary-popup');
+
+    // Clear existing content
+    orderPopupContainer.innerHTML = '';
+
+    // Calculate total cost and total quantity
+    let totalCost = 0;
+    let totalQuantity = 0;
+
+    // Loop through orderSummary and add items
+    orderSummary.forEach(order => {
+        totalCost += parseFloat(order.totalPrice);
+        totalQuantity += order.quantity;
+
+        const orderItem = document.createElement('div');
+        orderItem.className = 'order-summary-item';
+        orderItem.innerHTML = `
+            <p><strong>Order ID:</strong> ${order.orderID}</p>
+            <p><strong>Product:</strong> ${order.productName}</p>
+            <p><strong>Type:</strong> ${order.productType}</p>
+            <p><strong>Unit Price:</strong> $${order.unitPrice}</p>
+            <p><strong>Quantity:</strong> ${order.quantity} kg</p>
+            <p><strong>Total:</strong> $${order.totalPrice}</p>
+        `;
+        orderPopupContainer.appendChild(orderItem);
+    });
+
+    // Add Total Summary at the bottom
+    const totalSummary = document.createElement('div');
+    totalSummary.className = 'total-summary';
+    totalSummary.innerHTML = `
+        <hr>
+        <p><strong>Total Quantity:</strong> ${totalQuantity} kg</p>
+        <p><strong>Total Cost:</strong> $${totalCost.toFixed(2)}</p>
+    `;
+    orderPopupContainer.appendChild(totalSummary);
+
+    // Add Close Button
+    const closeButton = document.createElement('button');
+    closeButton.className = 'close-popup-btn';
+    closeButton.innerText = 'Close';
+    closeButton.onclick = () => {
+        orderPopupContainer.style.display = 'none';
+    };
+    orderPopupContainer.appendChild(closeButton);
+
+    // Make the popup visible
+    orderPopupContainer.style.display = 'block';
+}
+
+
+// Save order to localStorage
+function saveOrderToReports(orderDetails) {
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push(orderDetails);
+    localStorage.setItem("orders", JSON.stringify(orders));
+}
+
+// Handle Order Form Submission
+document.getElementById('order-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent page reload
+
+    const productCode = event.target.dataset.productCode;
+    const product = productsData.find(p => p.productCode === productCode);
+
+    const quantity = parseInt(document.getElementById('quantity').value);
+    const location = document.getElementById('location').value;
+    const phone = document.getElementById('phone').value;
+    const name = document.getElementById('name').value;
+
+    const orderID = generateOrderID();
+    const unitPrice = product.price;
+    const totalPrice = (unitPrice * quantity).toFixed(2);
+
+    // Create an order object
+    const orderDetails = {
+        orderID: orderID,
+        productName: product.productName,
+        productType: product.quality,
+        unitPrice: unitPrice,
+        quantity: quantity,
+        totalPrice: totalPrice,
+        location: location,
+        phone: phone,
+        name: name,
+        orderDate: new Date().toLocaleString()
+    };
+
+    // Save to Order Reports
+    saveOrderToReports(orderDetails);
+
+    // Confirm order submission
+    alert(`Order Submitted Successfully!\nOrder ID: ${orderID}`);
+
+    // Hide the order popup after submission
+    closePopup();
+});
+
+
+

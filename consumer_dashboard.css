@@ -9,7 +9,7 @@ body, h1, h2, p, input, select {
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(255, 255, 255);
-    color: rgb(11, 147, 11);
+    color: rgb(0, 0, 0);
 }
 
 /* Header Section */
@@ -284,4 +284,70 @@ body {
 
 #order-history-table tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+
+/* Order Summary Popup */
+.order-summary-popup {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+}
+
+.order-summary-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.order-summary-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.order-summary-popup::-webkit-scrollbar {
+    width: 5px;
+}
+
+.order-summary-popup::-webkit-scrollbar-thumb {
+    background: rgb(20, 141, 16);
+    border-radius: 10px;
+}
+
+
+
+.reports-section {
+    margin: 20px auto;
+    width: 90%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#reports-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#reports-table th, #reports-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#reports-table th {
+    background-color: #4CAF50;
+    color: white;
 }

@@ -15,7 +15,9 @@
         <div class="sub-header">
             <h1>Consumer Dashboard</h1>
             <nav>
-                <a href="#logout" class="logout-btn">Logout</a>
+                <a href="order-history.html" class="nav-link">View Order History</a>
+
+                <a href="mainPage.html" class="logout-btn">Logout</a>
             </nav>
         </div>
     </div>
@@ -44,6 +46,9 @@
         </div>
     </div>
 
+
+
+    
     <!-- Footer -->
     <div class="footer">
         <p>&copy; 2024 Company Name. All Rights Reserved.</p>
@@ -74,28 +79,9 @@
     </div>
 </div>
 
-<!-- Order History Section -->
-<div class="order-history">
-    <h3>Your Previous Orders</h3>
-    <table id="order-history-table">
-        <thead>
-            <tr>
-                <th>Product Name</th>
-                <th>Quantity</th>
-                <th>Transport Location</th>
-                <th>Phone Number</th>
-                <th>Order Status</th>
-            </tr>
-        </thead>
-        <tbody id="order-history-list">
-            <!-- Data will be populated dynamically from JavaScript -->
-        </tbody>
-    </table>
-</div>
 
-<!-- Include a link or button to the order history page -->
-<button onclick="showOrderHistory()">View Order History</button>
 
+<div id="order-summary-popup" class="order-summary-popup"></div>
 
     <script src="consumer_dashboard.js"></script>
 </body>
