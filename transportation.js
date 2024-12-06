@@ -76,5 +76,5 @@ function removeVehicle(vehicleId) {
 // Logout functionality
 function logout() {
     alert("Logging out...");
-    window.location.href = "login.html"; // Redirect to login page
+    window.location.href = "mainPage.html"; // Redirect to login page
 }
