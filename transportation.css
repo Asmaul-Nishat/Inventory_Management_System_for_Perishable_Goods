@@ -2,90 +2,132 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-.header {
+  }
+  
+  .wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    border-bottom: 2px solid #ccc;
-}
-
-.logo {
-    height: 50px;
-}
-
-.title h1 {
-    margin: 0;
-    color: #333;
-}
-
-.logout button {
-    padding: 5px 10px;
-    background-color: #ff4b5c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.main-content {
-    padding: 20px;
-}
-
-.add-vehicle-section, .active-transport-section {
-    margin-bottom: 30px;
-}
-
-.add-vehicle-section h2, .active-transport-section h2 {
-    color: #333;
-}
-
-.add-vehicle-section form input {
-    padding: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.add-vehicle-section form button {
-    padding: 10px 20px;
+  }
+  
+  .sidebar {
     background-color: rgb(11, 147, 11);
-    color: white;
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+    height: 100vh;
+  }
+  
+  .nav-button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(11, 147, 11);
+    color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-}
-
-.active-transport-section table {
+  }
+  
+  .nav-button:hover {
+    background-color: rgb(9, 120, 9);
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #f7f9fc;
+  }
+  
+  header h1 {
+    margin-bottom: 20px;
+    color: #34495e;
+  }
+  
+  .stats-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .stat-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-card h3 {
+    color: rgb(11, 147, 11);
+  }
+  
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  table {
     width: 100%;
     border-collapse: collapse;
-}
-
-.active-transport-section th, .active-transport-section td {
-    padding: 10px;
-    text-align: left;
+    background-color: #ffffff;
     border: 1px solid #ddd;
-}
-
-.active-transport-section th {
-    background-color: #f4f4f4;
-}
-
-.active-transport-section tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.active-transport-section tr:hover {
-    background-color: #f1f1f1;
-}
-
-.footer {
-    text-align: center;
+  }
+  
+  th {
+    background-color: rgb(11, 147, 11);
+    color: #fff;
     padding: 10px;
+  }
+  
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    color: #34495e;
+  }
+  
+  .search-bar {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .modal h3 {
+    margin-bottom: 20px;
+    color: rgb(11, 147, 11);
+  }
+  
+  .modal input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    border: none;
     background-color: rgb(11, 147, 11);
     color: white;
-}
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgb(9, 120, 9);
+  }
+  

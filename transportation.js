@@ -1,80 +1,96 @@
-// Vehicle list to hold active transportations
-const vehicles = [];
+let vehicleData = [];
+let editingIndex = null; // Track the index being edited
 
-// Add a new vehicle
-function addVehicle(event) {
-    event.preventDefault();
+// Function to render the vehicle table
+function renderVehicleTable() {
+  const vehicleTableBody = document.getElementById('vehicle-table-body');
+  vehicleTableBody.innerHTML = '';
 
-    const vehicleId = document.getElementById("vehicleId").value.trim();
-    const vehicleType = document.getElementById("vehicleType").value.trim();
-    const driverName = document.getElementById("driverName").value.trim();
+  vehicleData.forEach((vehicle, index) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${vehicle.vehicleRegNumber}</td>
+      <td>${vehicle.manufacturingYear}</td>
+      <td>${vehicle.mileage}</td>
+      <td>${vehicle.lastServicingDate}</td>
+      <td>
+        <button onclick="editVehicle(${index})">Edit</button>
+        <button onclick="deleteVehicle(${index})">Delete</button>
+      </td>
+    `;
+    vehicleTableBody.appendChild(tr);
+  });
 
-    // Validate input
-    if (vehicleId && vehicleType && driverName) {
-        vehicles.push({
-            id: vehicleId,
-            type: vehicleType,
-            driver: driverName,
-            status: "Idle",
-        });
-
-        // Update the transportation table
-        updateTable();
-
-        // Clear the form
-        document.getElementById("addVehicleForm").reset();
-    } else {
-        alert("Please fill all fields.");
-    }
+  document.getElementById('total-vehicles').innerText = vehicleData.length;
 }
 
-// Update the transportation table
-function updateTable() {
-    const tableBody = document.getElementById("transportationTable").getElementsByTagName("tbody")[0];
-    tableBody.innerHTML = ""; // Clear previous rows
+// Function to save or update a vehicle
+function saveVehicle() {
+  const vehicleRegNumber = document.getElementById('modal-vehicle-reg').value;
+  const manufacturingYear = parseInt(document.getElementById('modal-manufacturing-year').value);
+  const mileage = parseInt(document.getElementById('modal-mileage').value);
+  const lastServicingDate = document.getElementById('modal-servicing-date').value;
 
-    vehicles.forEach(vehicle => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${vehicle.id}</td>
-            <td>${vehicle.type}</td>
-            <td>${vehicle.driver}</td>
-            <td>${vehicle.status}</td>
-            <td>
-                <button onclick="updateStatus('${vehicle.id}')">Update Status</button>
-                <button onclick="removeVehicle('${vehicle.id}')">Remove</button>
-            </td>
-        `;
-        tableBody.appendChild(row);
-    });
+  if (editingIndex !== null) {
+    // Update existing vehicle
+    vehicleData[editingIndex] = {
+      vehicleRegNumber,
+      manufacturingYear,
+      mileage,
+      lastServicingDate,
+    };
+    editingIndex = null; // Reset editing index
+  } else {
+    // Add new vehicle
+    const newVehicle = {
+      vehicleRegNumber,
+      manufacturingYear,
+      mileage,
+      lastServicingDate,
+    };
+    vehicleData.push(newVehicle);
+  }
+
+  closeModal();
+  renderVehicleTable();
 }
 
-// Update the status of a vehicle
-function updateStatus(vehicleId) {
-    const vehicle = vehicles.find(v => v.id === vehicleId);
-    if (vehicle) {
-        const newStatus = prompt("Enter new status (Idle, In Transit, Delivered):", vehicle.status);
-        if (newStatus) {
-            vehicle.status = newStatus;
-            updateTable();
-        }
-    }
+// Function to populate the modal with existing data for editing
+function editVehicle(index) {
+  const vehicle = vehicleData[index];
+  document.getElementById('modal-vehicle-reg').value = vehicle.vehicleRegNumber;
+  document.getElementById('modal-manufacturing-year').value = vehicle.manufacturingYear;
+  document.getElementById('modal-mileage').value = vehicle.mileage;
+  document.getElementById('modal-servicing-date').value = vehicle.lastServicingDate;
+
+  editingIndex = index; // Set the editing index
+  showTransportationModal();
 }
 
-// Remove a vehicle from the list
-function removeVehicle(vehicleId) {
-    const confirmDelete = confirm(`Are you sure you want to remove Vehicle ID ${vehicleId}?`);
-    if (confirmDelete) {
-        const index = vehicles.findIndex(v => v.id === vehicleId);
-        if (index !== -1) {
-            vehicles.splice(index, 1);
-            updateTable();
-        }
-    }
+// Modal functions
+function closeModal() {
+  document.getElementById('transportationModal').style.display = 'none';
+  resetModal();
 }
 
-// Logout functionality
-function logout() {
-    alert("Logging out...");
-    window.location.href = "mainPage.html"; // Redirect to login page
+function showTransportationModal() {
+  document.getElementById('transportationModal').style.display = 'block';
 }
+
+// Function to reset modal inputs
+function resetModal() {
+  document.getElementById('modal-vehicle-reg').value = '';
+  document.getElementById('modal-manufacturing-year').value = '';
+  document.getElementById('modal-mileage').value = '';
+  document.getElementById('modal-servicing-date').value = '';
+  editingIndex = null; // Reset editing index to prevent unintended edits
+}
+
+// Function to delete a vehicle
+function deleteVehicle(index) {
+  vehicleData.splice(index, 1);
+  renderVehicleTable();
+}
+
+// Initialize the table on load
+window.onload = renderVehicleTable;

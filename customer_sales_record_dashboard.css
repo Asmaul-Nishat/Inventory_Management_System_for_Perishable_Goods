@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Header */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef2f3;
+}
+
+header {
+    background-color:  rgb(11, 147, 11);
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    margin: 5px 0;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: white;
+    color:  rgb(11, 147, 11);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+nav button:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+/* Form Section */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 700px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-container label {
+    flex: 1 0 100%;
+    font-size: 14px;
+}
+
+.form-container input,
+.form-container select {
+    flex: 1 0 calc(50% - 10px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-container button {
+    flex: 1 0 100%;
+    padding: 10px 20px;
+    background-color:  rgb(11, 147, 11);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-container button:hover {
+    background-color:  rgb(11, 147, 11);
+}
+
+/* Table Section */
+.records-container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color:  rgb(11, 147, 11);
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .form-container form {
+        gap: 8px;
+    }
+
+    .form-container input,
+    .form-container select {
+        flex: 1 0 100%;
+    }
+}
+.dynamic-fields label,
+.dynamic-fields input {
+    flex: 1 0 calc(50% - 10px);
+    padding: 10px;
+}
+
+/* Sidebar - Left Menu Bar */
+.sidebar {
+    background-color:  rgb(11, 147, 11);
+    color: white;
+    width: 250px;
+    height: 100vh; /* Full height of the viewport */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Remove white borders & change text to white */
+.sidebar button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.sidebar button:hover {
+    transform: scale(1.05);
+}

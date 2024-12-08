@@ -9,8 +9,8 @@ body {
   }
   
   .sidebar {
-    background-color: rgb(11, 147, 11); /* Green for sidebar background */
-    color: #fff; /* White text for contrast */
+    background-color: rgb(11, 147, 11);
+    color: #fff;
     padding: 20px;
     width: 200px;
     height: 100vh;
@@ -21,25 +21,23 @@ body {
     margin: 10px 0;
     padding: 10px;
     width: 100%;
-    background-color: rgb(11, 147, 11); /* Green for buttons */
-    color: #fff; /* White text */
+    background-color: #087c08;
+    color: #fff;
     border: none;
     cursor: pointer;
   }
   
   .nav-button:hover {
-    background-color: rgb(9, 120, 9); /* Darker green for hover effect */
+    background-color: #066206;
   }
   
   .main-content {
     flex: 1;
     padding: 20px;
-    background-color: #f7f9fc; /* Light background for content area */
   }
   
   header h1 {
     margin-bottom: 20px;
-    color: #34495e; /* Darker heading color */
   }
   
   .stats-container {
@@ -50,15 +48,10 @@ body {
   
   .stat-card {
     padding: 20px;
-    border: 1px solid #ddd; /* Subtle border */
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #ffffff; /* White card background */
+    background-color: #f9f9f9;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow effect */
-  }
-  
-  .stat-card h3 {
-    color: rgb(11, 147, 11); /* Green for headings */
   }
   
   .table-container {
@@ -68,21 +61,27 @@ body {
   table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #ffffff; /* White table background */
-    border: 1px solid #ddd;
   }
   
   th {
-    background-color: rgb(11, 147, 11); /* Green header background */
-    color: #fff; /* White text for header */
+    background-color: rgb(11, 147, 11);
+    color: white;
     padding: 10px;
+    border: 1px solid #ddd;
   }
   
   td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
-    color: #34495e; /* Standard text color */
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: rgba(11, 147, 11, 0.1); /* Light green for alternate rows */
+  }
+  
+  tbody tr:hover {
+    background-color: rgba(11, 147, 11, 0.2); /* Slightly darker green on hover */
   }
   
   .search-bar {
@@ -107,7 +106,6 @@ body {
   
   .modal h3 {
     margin-bottom: 20px;
-    color: rgb(11, 147, 11); /* Green for modal heading */
   }
   
   .modal input {
@@ -122,12 +120,12 @@ body {
     padding: 8px 16px;
     margin-top: 10px;
     border: none;
-    background-color: rgb(11, 147, 11); /* Green for buttons */
+    background-color: rgb(11, 147, 11);
     color: white;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: rgb(9, 120, 9); /* Darker green on hover */
+    background-color: #087c08;
   }
   

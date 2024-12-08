@@ -1,43 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Product</title>
-    <link rel="stylesheet" href="product.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Dashboard</title>
+  <link rel="stylesheet" href="product.css" />
 </head>
 <body>
-    <header class="header">
-        <h1>Upload New Product</h1>
-        <nav class="navigation">
-            <ul>
-                <li><a href="mainPage.html">Dashboard</a></li>
-                <li><a href="product_list.html">Products</a></li>
-                <li><a href="logout.html">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Product Menu</h2>
+      <button onclick="showProductModal()" class="nav-button">Add Product</button>
+      <button onclick="logout()" class="nav-button">Logout</button>
+    </div>
 
-    <main class="main-content">
-        <h2>Add a New Product</h2>
-        <form action="/upload_product" method="POST" enctype="multipart/form-data" class="product-form">
-            <label for="product-name">Product Name:</label>
-            <input type="text" id="product-name" name="product_name" placeholder="Enter product name" required>
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>Product Dashboard</h1>
+      </header>
 
-            <label for="product-category">Category:</label>
-            <input type="text" id="product-category" name="product_category" placeholder="Enter product category" required>
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3>Total Products</h3>
+          <p id="total-products">0</p>
+        </div>
+      </div>
 
-            <label for="product-price">Price:</label>
-            <input type="number" id="product-price" name="product_price" placeholder="Enter product price" step="0.01" required>
+      <div class="table-container">
+        <h2>Product Data</h2>
+        <input
+          type="text"
+          id="product-search"
+          placeholder="Search product records..."
+          onkeyup="filterProductTable()"
+          class="search-bar"
+        />
+        <table>
+          <thead>
+            <tr>
+              <th>Product ID</th>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Storage Location</th>
+              <th>Expiration Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="product-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
-            <label for="product-description">Description:</label>
-            <textarea id="product-description" name="product_description" rows="4" placeholder="Enter product description" required></textarea>
+  <!-- Modal for Product -->
+  <div class="modal" id="productModal">
+    <h3>Add/Edit Product</h3>
+    <label>Product ID:</label>
+    <input type="text" id="modal-product-id" />
+    <label>Product Name:</label>
+    <input type="text" id="modal-product-name" />
+    <label>Quantity:</label>
+    <input type="number" id="modal-product-quantity" />
+    <label>Storage Location:</label>
+    <input type="text" id="modal-storage-location" />
+    <label>Expiration Date:</label>
+    <input type="date" id="modal-expiration-date" />
+    <button onclick="saveProduct()">Save</button>
+    <button onclick="closeProductModal()">Cancel</button>
+  </div>
 
-            <label for="product-photo">Product Photo:</label>
-            <input type="file" id="product-photo" name="product_photo" accept="image/*" required>
-
-            <button type="submit" class="btn-submit">Upload Product</button>
-        </form>
-    </main>
+  <script src="product.js"></script>
 </body>
 </html>
