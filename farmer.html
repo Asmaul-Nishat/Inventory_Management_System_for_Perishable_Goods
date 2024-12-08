@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmer Dashboard</title>
-    <link rel="stylesheet" href="/farmer.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farmer Dashboard</title>
+  <link rel="stylesheet" href="farmer.css" />
 </head>
+
 <body>
-    <header class="dashboard-header">
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+      <h2>Farmer Menu</h2>
+      <button onclick="showFarmerModal()" class="nav-button">Add Farmer</button>
+      <button onclick="logout()" class="nav-button">Logout</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
         <h1>Farmer Dashboard</h1>
-        <main class="main-content">
-            <section id="edit-data">
-                <h2>Edit Your Data</h2>
-                <form action="/farmer/update" method="POST" class="data-form">
-                    <label for="farmer-name">Name:</label>
-                    <input type="text" id="farmer-name" name="farmer_name" placeholder="Enter your name" required>
-    
-                    <label for="contact-info">Contact Info:</label>
-                    <input type="text" id="contact-info" name="contact_info" placeholder="Enter contact details" required>
-    
-                    <label for="farm-location">Farm Location:</label>
-                    <input type="text" id="farm-location" name="farm_location" placeholder="Enter location" required>
-    
-                    <label for="quantity">Product Quantity:</label>
-                    <input type="text" id="quantity" name="quantity" placeholder="Enter quantity" required>
-    
+      </header>
 
-                    <label for="crop-details">Crop Details:</label>
-                    <textarea id="crop-details" name="crop_details" rows="4" placeholder="Describe your crops" required></textarea>
-    
-                    <button type="submit" class="btn-submit">Update Data</button>
-                </form>
-            </section>
-            <br><br><br>
-    
-            <section id="view-info">
-                <h2>View Your Information</h2>
-                <p>Click below to see the details of your submitted data.</p>
-                <button onclick="location.href='/farmer/info'" class="btn-view">View Info</button>
-            </section>
-        </main>
-    </header>
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3>Total Farmers</h3>
+          <p id="total-farmers">0</p>
+        </div>
+      </div>
 
-    <nav class="sidebar">
-        <ul>
-            <li><a href="#edit-data">Edit Data</a></li>
-            <li><a href="#view-info">View Information</a></li>
-            <li><a href="#logout">Logout</a></li>
-        </ul>
-    </nav>
+      <div class="table-container">
+        <h2>Farmer Data</h2>
+        <input
+          type="text"
+          id="farmer-search"
+          placeholder="Search farmer records..."
+          onkeyup="filterFarmerTable()"
+          class="search-bar"
+        />
+        <table>
+          <thead>
+            <tr>
+              <th>Organization ID</th>
+              <th>Organization Name</th>
+              <th>License Number</th>
+              <th>Farm Location</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="farmer-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
-    
+  <!-- Modal for Farmer -->
+  <div class="modal" id="farmerModal">
+    <h3>Add/Edit Farmer</h3>
+    <label>Organization ID:</label>
+    <input type="text" id="modal-organization-id" />
+    <label>Organization Name:</label>
+    <input type="text" id="modal-organization-name" />
+    <label>License Number:</label>
+    <input type="text" id="modal-license-number" />
+    <label>Farm Location:</label>
+    <input type="text" id="modal-farm-location" />
+    <button onclick="saveFarmer()">Save</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+
+  <script src="farmer.js"></script>
 </body>
+
 </html>
