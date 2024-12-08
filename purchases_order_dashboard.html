@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purchase Order Dashboard</title>
+  <link rel="stylesheet" href="purchases_order_dashboard.css" />
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <div class="wrapper">
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+      <h2>Purchase Order Menu</h2>
+      <button onclick="showPurchaseOrderModal()" class="nav-button">Add Purchase Order</button>
+      <button onclick="logout()" class="nav-button">Logout</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <header>
+        <h1>Purchase Order Dashboard</h1>
+      </header>
+
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3>Total Orders</h3>
+          <p id="total-orders">0</p>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <h2>Purchase Order Data</h2>
+        <input
+          type="text"
+          id="order-search"
+          placeholder="Search purchase orders..."
+          onkeyup="filterPurchaseOrderTable()"
+          class="search-bar"
+        />
+        <table>
+          <thead>
+            <tr>
+              <th>Purchase Order ID</th>
+              <th>Order Date</th>
+              <th>Total Cost</th>
+              <th>Delivery Location</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="purchase-order-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Purchase Order -->
+  <div class="modal" id="purchaseOrderModal">
+    <h3>Add/Edit Purchase Order</h3>
+    <label>Purchase Order ID:</label>
+    <input type="text" id="modal-purchase-order-id" />
+    <label>Order Date:</label>
+    <input type="date" id="modal-order-date" />
+    <label>Total Cost:</label>
+    <input type="number" id="modal-total-cost" />
+    <label>Delivery Location:</label>
+    <input type="text" id="modal-delivery-location" />
+    <button onclick="savePurchaseOrder()">Save</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+
+  <script src="purchases_order_dashboard.js"></script>
+</body>
+
+</html>
