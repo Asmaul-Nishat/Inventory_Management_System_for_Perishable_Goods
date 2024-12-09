@@ -74,3 +74,7 @@ function deleteFarmer(index) {
 }
 
 window.onload = renderFarmerTable;
+
+function showHarvestModal() {
+  window.location.href = 'harvest_dashboard.html'; // Redirect to the harvest dashboard
+}
