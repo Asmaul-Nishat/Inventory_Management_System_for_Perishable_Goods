@@ -11,7 +11,7 @@ function renderHarvestTable() {
       <td>${harvestItem.harvestId}</td>
       <td>${harvestItem.quantityHarvested}</td>
       <td>${harvestItem.dateOfHarvest}</td>
-      <td>${harvestItem.grade}</td>
+
       <td>${harvestItem.expirationDate}</td>
       <td>${harvestItem.shelfLife}</td>
       <td>${harvestItem.quantityUnitToStorage}</td>
@@ -31,7 +31,7 @@ function saveHarvest() {
   const harvestId = document.getElementById('modal-harvest-id').value;
   const quantityHarvested = parseInt(document.getElementById('modal-quantity-harvested').value);
   const dateOfHarvest = document.getElementById('modal-date-harvest').value;
-  const grade = document.getElementById('modal-grade').value;
+  // const grade = document.getElementById('modal-grade').value;
   const expirationDate = document.getElementById('modal-expiration-date').value;
   const shelfLife = parseInt(document.getElementById('modal-shelf-life').value);
   const quantityUnitToStorage = parseInt(document.getElementById('modal-storage-quantity').value);
@@ -40,7 +40,7 @@ function saveHarvest() {
     harvestId,
     quantityHarvested,
     dateOfHarvest,
-    grade,
+    // grade,
     expirationDate,
     shelfLife,
     quantityUnitToStorage
@@ -75,7 +75,7 @@ function clearModalFields() {
   document.getElementById('modal-harvest-id').value = '';
   document.getElementById('modal-quantity-harvested').value = '';
   document.getElementById('modal-date-harvest').value = '';
-  document.getElementById('modal-grade').value = '';
+  // document.getElementById('modal-grade').value = '';
   document.getElementById('modal-expiration-date').value = '';
   document.getElementById('modal-shelf-life').value = '';
   document.getElementById('modal-storage-quantity').value = '';
@@ -100,7 +100,7 @@ function editHarvest(index) {
   document.getElementById('modal-harvest-id').value = harvestItem.harvestId;
   document.getElementById('modal-quantity-harvested').value = harvestItem.quantityHarvested;
   document.getElementById('modal-date-harvest').value = harvestItem.dateOfHarvest;
-  document.getElementById('modal-grade').value = harvestItem.grade;
+  // document.getElementById('modal-grade').value = harvestItem.grade;
   document.getElementById('modal-expiration-date').value = harvestItem.expirationDate;
   document.getElementById('modal-shelf-life').value = harvestItem.shelfLife;
   document.getElementById('modal-storage-quantity').value = harvestItem.quantityUnitToStorage;
