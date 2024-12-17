@@ -25,7 +25,7 @@
     </header>
     <main>
         <!-- Overview Section -->
-        <section id="overview">
+        <!-- <section id="overview">
             <h2>Overview</h2>
             <div class="stats">
                 <div class="stat-item">
@@ -40,7 +40,7 @@
                     <h3>20</h3>
                     <p>Pending Orders</p>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <!-- User Management Section -->
@@ -78,11 +78,11 @@
         </section>
 
         <!-- Settings Section -->
-        <section id="settings">
+        <!-- <section id="settings">
             <h2>Settings</h2>
             <button onclick="location.href='admin_settings.html'">Settings</button>
             <p>Configure system preferences.</p>
-        </section>
+        </section> -->
     </main>
     <footer>
         <p>&copy; 2024 Farm Inventory Management. All rights reserved.</p>
