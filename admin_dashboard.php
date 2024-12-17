@@ -58,7 +58,7 @@
         <section id="inventory-management">
             <h2>Inventory Management</h2>
             <p>Manage and track all inventory items.</p>
-            <button onclick="location.href='farmer.html'">Farm</button>
+            <button onclick="location.href='farmer.php'">Farm</button>
             <button onclick="location.href='manage_inventory_report.html'">Inventory Reports</button>
             <button onclick="location.href='storage.html'">Storage Details</button>
             <button onclick="location.href='transportation.html'">Transportation</button>
