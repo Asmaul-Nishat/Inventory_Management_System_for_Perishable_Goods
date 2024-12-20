@@ -94,3 +94,6 @@ function deleteVehicle(index) {
 
 // Initialize the table on load
 window.onload = renderVehicleTable;
+
+
+

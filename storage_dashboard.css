@@ -58,36 +58,20 @@ body {
     margin-bottom: 20px;
 }
 
-/* Chart Styling */
-.chart-container {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-#storageChart {
-    max-width: 400px;
-    max-height: 400px;
-    margin: 0 auto;
-}
-
 /* Table Styling */
-.storage-table table {
+.table-container table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-.storage-table th, .storage-table td {
+.table-container th, .table-container td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
 }
 
-.storage-table th {
+.table-container th {
     background-color: rgb(11, 147, 11);
     color: white;
 }
@@ -116,18 +100,4 @@ body {
     float: right;
     font-size: 20px;
     cursor: pointer;
-}
-
-/* Button Styling */
-.btn {
-    padding: 10px 15px;
-    background-color: rgb(11, 147, 11);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: rgb(11, 147, 11);
 }

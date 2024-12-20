@@ -82,8 +82,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         <div class="sidebar">
             <h2>Farm Menu</h2>
             <button onclick="showModal()">Add Farm</button>
-            <button onclick="location.href='harvest_dashboard.html'">Harvest</button>
-            <button onclick="logout()">Logout</button>
+            <button onclick="location.href='harvest_dashboard.php'">Harvest</button>
+            <button onclick="location.href='mainPage.php'"">Logout</button>
         </div>
 
         <div class="main-content">

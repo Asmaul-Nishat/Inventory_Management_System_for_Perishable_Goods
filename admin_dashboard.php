@@ -59,22 +59,25 @@
             <h2>Inventory Management</h2>
             <p>Manage and track all inventory items.</p>
             <button onclick="location.href='farmer.php'">Farm</button>
-            <button onclick="location.href='manage_inventory_report.html'">Inventory Reports</button>
-            <button onclick="location.href='storage.html'">Storage Details</button>
-            <button onclick="location.href='transportation.html'">Transportation</button>
-            <button onclick="location.href='harvest_dashboard.html'">Harvest</button>
-            <button onclick="location.href='store_dashboard.html'">Store</button>
-            <button onclick="location.href='product.html'">product</button>
-            <button onclick="location.href='shipment_dashboard.html'">Shipment</button>
+            <button onclick="location.href='storage.php'">Storage Details</button>
+            <button onclick="location.href='transportation.php'">Transportation</button>
+            <button onclick="location.href='consumer_dashboard.php'">consumer_dashboard</button>
+            <button onclick="location.href='product.php'">product</button>
+            <button onclick="location.href='store_dashboard.php'">Store</button>
+            <button onclick="location.href='shipment_dashboard.php'">Shipment</button>
+            <button onclick="location.href='distributor_dashboard.php'">Distributor</button>
         </section>
 
         <!-- Reports Section -->
         <section id="reports">
             <h2>Reports</h2>
             <p>Access reports across the system.</p>
-            <button onclick="location.href='crop_reports.html'">Crop Reports</button>
-            <button onclick="location.href='storage_reports.html'">Storage Reports</button>
-            <button onclick="location.href='purchases_order_dashboard.html'">Purchases Order Reports</button>
+            <button onclick="location.href='harvest_dashboard.php'">Harvest</button>
+            <button onclick="location.href='customer_sales_record_dashboard.php'">sales record</button>
+            
+            <button onclick="location.href='transportation_sensor_data.php'">transportation_sensor_data</button>
+            <button onclick="location.href='storage_sensor_data.php'">storage_sensor_data</button>
+            <button onclick="location.href='purchases_order_dashboard.php'">Purchases Order Reports</button>
         </section>
 
         <!-- Settings Section -->
