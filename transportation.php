@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             <h2>Transportation Menu</h2>
             <button onclick="showModal()">Add Vehicle</button>
             <button onclick="window.location.href='transportation_sensor_data.php'">Transportation Sensor Data</button>
-            <button onclick="logout()">Logout</button>
+            <button onclick="location.href='mainPage.php'">Logout</button>
         </div>
 
         <div class="main-content">

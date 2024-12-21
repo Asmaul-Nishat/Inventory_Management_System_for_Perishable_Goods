@@ -119,7 +119,7 @@ if (!$stores) {
             <button onclick="location.href='shipment_dashboard.php'" class="nav-button">Shipment</button>
             <button onclick="location.href='customer_sales_record_dashboard.php'" class="nav-button">Consumer Sales Record</button>
             <button onclick="location.href='distributor_dashboard.php'" class="nav-button">Distributor</button>
-            <button onclick="location.href='mainPage'" class="nav-button">Logout</button>
+            <button onclick="location.href='mainPage.php'" class="nav-button">Logout</button>
         </div>
 
         <div class="main-content">

@@ -213,6 +213,7 @@ if ($result->num_rows > 0) {
 
 <div class="container">
     <h1>Consumer Sales Record Dashboard</h1>
+    <button onclick="location.href='mainPage.php'">Logout</button>
     <?= $message ?>
 
     <!-- Form Section -->

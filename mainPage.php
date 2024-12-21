@@ -121,12 +121,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             text-align: center;
             margin-top: 10px;
         }
+
+        .company-name{
+            color:white;
+        }
     </style>
 </head>
 <body>
 
     <div class="logo-container">
-        <img src="logo.png" alt="Company Logo">
+        <img src="logo4.png" alt="Company Logo">
+        <h1 class="company-name">HarvestPro: From Field to Future</h1>
     </div>
 
     <div class="login-container">

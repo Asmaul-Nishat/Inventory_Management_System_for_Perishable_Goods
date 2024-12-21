@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         <div class="sidebar">
             <h2>Sensor Data Menu</h2>
             <button onclick="showModal()">Add Sensor Data</button>
-            <button onclick="logout()">Logout</button>
+            <button onclick="location.href='mainPage.php'">Logout</button>
         </div>
 
         <div class="main-content">

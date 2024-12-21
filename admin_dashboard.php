@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Farm Logo">
+            <img src="logo4.png" alt="Farm Logo">
             <h1>Admin Dashboard</h1>
         </div>
         <nav>
@@ -18,8 +18,8 @@
                 <!-- <li><a href="#user-management">Users</a></li> -->
                 <li><a href="#inventory-management">Inventory</a></li>
                 <li><a href="#reports">Reports</a></li>
-                <li><a href="#settings">Settings</a></li>
-                <li><a href="mainPage.html" class="logout-btn">Logout</a></li>
+                <!-- <li><a href="#settings">Settings</a></li> -->
+                <li><a href="mainPage.php" class="logout-btn">Logout</a></li>
             </ul>
         </nav>
     </header>

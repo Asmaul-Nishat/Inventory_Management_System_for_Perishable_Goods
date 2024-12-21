@@ -97,7 +97,7 @@ $conn->close();
       <h2>Product Menu</h2>
       <button onclick="showProductModal()" class="nav-button">Add Product</button>
       <button onclick="location.href='shipment_dashboard.php'" class="nav-button">Shipment</button>
-      <button onclick="logout()" class="nav-button">Logout</button>
+      <button onclick="location.href='mainPage.php'" class="nav-button">Logout</button>
     </div>
 
     <!-- Main Content -->
